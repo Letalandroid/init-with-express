@@ -2,7 +2,6 @@
     // For server: express, morgan, dotenv
     const express = require('express');
     const morgan = require('morgan');
-    require('dotenv').config();
     require('./models/example.js');
 
 const path = require('path');
