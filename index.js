@@ -3,7 +3,7 @@
     const express = require('express');
     const morgan = require('morgan');
     const dotenv = require('dotenv').config();
-    const newName = require('./models/example');
+    const newName = require('./models/example.js');
 
 const path = require('path');
 const exphbs = require('express-handlebars');
