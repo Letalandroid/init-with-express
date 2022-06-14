@@ -11,7 +11,7 @@ const override = require('method-override');
 // DB Connection
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.DB_CONNECTION, {
+mongoose.connect('mongodb+srv://lta:utnTDfIu444Tj2gi@cluster0.rf2gwyo.mongodb.net/example1?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('DB Connected')).catch(err => console.log(err));
