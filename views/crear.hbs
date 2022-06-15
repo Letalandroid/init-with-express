@@ -1,7 +1,42 @@
-<form action="/" method="post">
-  <input name="name" type="text" placeholder="Ingrese un nombre..." />
-  <button class="btn btn-success">Agregar</button>
-</form>
+<main>
+  <h2 class="my-4">Crear nuevo contacto</h2>
+
+  <div class="card text-center" style="width: 22rem;">
+  <div class="card-body">
+    <form action="/" method="post">
+    <div class="input-group mb-3">
+      <span
+        class="input-group-text"
+        id="inputGroup-sizing-default"
+      >Nombre</span>
+      <input
+        name="name"
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <span
+        class="input-group-text"
+        id="inputGroup-sizing-default"
+      >#</span>
+      <input
+        name="number"
+        type="number"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default"
+      />
+    </div>
+    <button class="btn btn-success">Agregar</button>
+  </form>
+  </div>
+</div>
+
+  
+</main>
 
 <script>
   document.addEventListener("keypress", (e) => { if (e.keyCode == 13) {

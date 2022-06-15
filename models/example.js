@@ -2,7 +2,8 @@ const Mongoose = require('mongoose');
 const { Schema, model } = Mongoose;
 
 const example1Schema = new Schema({
-    name: String
+    name: String,
+    number: Number
 }, {versionKey: false});
 
 // Crear un modelo

@@ -43,8 +43,8 @@ app.get('/', async (_req, res) => {
     try {
         const example1DB = await Example1.find().lean();
 
-        res.render('index', {
-            style: 'index',
+        res.render('home', {
+            style: 'home',
             personas: example1DB
         });
 
@@ -57,8 +57,8 @@ app.get('/', async (_req, res) => {
 
 app.post('/', async (req, res) => {
 
-    const { name } = req.body;
-    const nuevaNota = new Example1({ name }).save();
+    const { name, number } = req.body;
+    const nuevaNota = new Example1({ name, number }).save();
 
     nuevaNota.then(() => {
         console.log('Nota creada');
@@ -71,7 +71,9 @@ app.post('/', async (req, res) => {
 })
 
 app.get('/crear', (_req, res) => {
-    res.render('crear');
+    res.render('crear', {
+        style: 'crear'
+        });
 })
 
 app.delete('/delete/:id', async (req, res) => {
