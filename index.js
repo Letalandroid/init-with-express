@@ -19,9 +19,9 @@ mongoose.connect(process.env.DB_CONNECTION, {
 
 // App setup
 const app = express();
-app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 app.use(override('_method'));
 app.set('views', path.join(__dirname, 'views'));
 app.engine('.hbs', exphbs.engine({

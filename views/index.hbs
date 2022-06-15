@@ -1,4 +1,4 @@
-<main class="d-flex justify-content-center flex-wrap mt-2">
+<main class="d-flex justify-content-center flex-wrap my-3">
 
   {{#each personas}}
     <div class="card m-2" style="width: 18rem;">
@@ -8,7 +8,7 @@
           additional content.</p>
         <div class="wrapper">
           <form class="one btn btn-primary" action="/edit/{{_id}}" method="GET">
-            <button class="edit" type="submit">Edit</button>
+            <button class="edit" type="submit"><i class="fa fa-pencil"></i></button>
           </form>
           <form
             class="two btn btn-danger"
@@ -16,7 +16,7 @@
             method="POST"
           >
             <input type="hidden" name="_method" value="DELETE" />
-            <button type="submit">X</button>
+            <button class="delete" type="submit">X</button>
           </form>
         </div>
       </div>
