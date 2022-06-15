@@ -85,19 +85,19 @@ app.delete('/delete/:id', async (req, res) => {
 
 app.get('/edit/:id', async (req, res) => {
 
-    const name = await Example1.findById(req.params.id).lean();
+    const contact = await Example1.findById(req.params.id).lean();
 
     res.render('edit', {
         style: 'edit',
-        name
+        contact
      });
 
 })
 
 app.put('/edit/:id', async (req, res) => {
 
-    const { name } = req.body;
-    await Example1.findByIdAndUpdate(req.params.id, { name });
+    const { name, number } = req.body;
+    await Example1.findByIdAndUpdate(req.params.id, { name, number });
     res.redirect('/');
 
 })

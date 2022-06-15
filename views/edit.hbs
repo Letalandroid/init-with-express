@@ -1,11 +1,42 @@
-<h2>Edit</h2>
-<form action="/edit/{{name._id}}?_method=PUT" method="POST">
-  <input type="hidden" name="_method" value="PUT" />
-  <input
-    name="name"
-    type="text"
-    placeholder="Ingrese el nombre..."
-    value="{{name.name}}"
-  />
-  <button class="edit" type="submit">Edit</button>
-</form>
+<main>
+  <div class="card text-center mt-4" style="width: 22rem;">
+    <h2 class="my-3">Edit</h2>
+    <div class="card-body">
+      <form action="/edit/{{contact._id}}?_method=PUT" method="POST">
+        <div class="input-group mb-3">
+          <span
+            class="input-group-text"
+            id="inputGroup-sizing-default"
+          >Nombre</span>
+          <input
+            name="name"
+            type="text"
+            class="form-control"
+            value="{{contact.name}}"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-default">#</span>
+          <input
+            name="number"
+            type="number"
+            class="form-control"
+            value="{{contact.number}}"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        <button class="btn btn-success">Agregar</button>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  document.addEventListener("keypress", (e) => { if (e.keyCode == 13) {
+  document.querySelector("form").submit(); } });
+
+</script>
