@@ -1,34 +1,26 @@
-<h1>Hello world</h1>
+<main class="d-flex justify-content-center flex-wrap mt-2">
 
-    <ul>
+  {{#each personas}}
+    <div class="card m-2" style="width: 18rem;">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to
+          additional content.</p>
+        <div class="wrapper">
+          <form class="one btn btn-primary" action="/edit/{{_id}}" method="GET">
+            <button class="edit" type="submit">Edit</button>
+          </form>
+          <form
+            class="two btn btn-danger"
+            action="/delete/{{_id}}?_method=DELETE"
+            method="POST"
+          >
+            <input type="hidden" name="_method" value="DELETE" />
+            <button type="submit">X</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {{/each}}
 
-        {{#each personas}}
-            <div>
-                <li>{{name}}</li>
-                <form action="/edit/{{_id}}" method="GET">
-                    <button class="edit" type="submit">Edit</button>
-                </form>
-                <form action="/delete/{{_id}}?_method=DELETE" method="POST">
-                    <input type="hidden" name="_method" value="DELETE">
-                    <button class="delete" type="submit">X</button>
-                </form>
-            </div>
-        {{/each}}
-
-    </ul>
-
-    <form action="/" method="post">
-        <input name="name" type="text" placeholder="Ingrese un nombre...">
-        <button>Agregar</button>
-    </form>
-
-    <script>
-        document.addEventListener("keypress", (e) => {
-
-            if (e.keyCode == 13) {
-                document.querySelector("form").submit();
-            }
-
-        });
-
-    </script>
+</main>

@@ -19,6 +19,7 @@ mongoose.connect(process.env.DB_CONNECTION, {
 
 // App setup
 const app = express();
+app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(override('_method'));
@@ -43,6 +44,7 @@ app.get('/', async (_req, res) => {
         const example1DB = await Example1.find().lean();
 
         res.render('index', {
+            style: 'index',
             personas: example1DB
         });
 
@@ -58,14 +60,18 @@ app.post('/', async (req, res) => {
     const { name } = req.body;
     const nuevaNota = new Example1({ name }).save();
 
-    nuevaNota.then((result) => {
-        console.log(result);
+    nuevaNota.then(() => {
+        console.log('Nota creada');
     }).catch((err) => {
         console.log(err);
     });
 
     res.redirect('/');
 
+})
+
+app.get('/crear', (_req, res) => {
+    res.render('crear');
 })
 
 app.delete('/delete/:id', async (req, res) => {

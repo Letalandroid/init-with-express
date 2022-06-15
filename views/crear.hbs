@@ -1,0 +1,10 @@
+<form action="/" method="post">
+  <input name="name" type="text" placeholder="Ingrese un nombre..." />
+  <button class="btn btn-success">Agregar</button>
+</form>
+
+<script>
+  document.addEventListener("keypress", (e) => { if (e.keyCode == 13) {
+  document.querySelector("form").submit(); } });
+
+</script>

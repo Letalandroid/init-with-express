@@ -1,0 +1,27 @@
+button {
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #fff;
+}
+
+ul > div {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.one {
+    grid-column: 1 / 3;
+}
+
+.two {
+    grid-column: 3 / 3;
+}
