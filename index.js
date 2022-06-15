@@ -87,7 +87,10 @@ app.get('/edit/:id', async (req, res) => {
 
     const name = await Example1.findById(req.params.id).lean();
 
-    res.render('edit', { name });
+    res.render('edit', {
+        style: 'edit',
+        name
+     });
 
 })
 

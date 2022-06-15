@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
-</head>
-<body>
-    <h1>Edit</h1>
-    <form action="/edit/{{name._id}}?_method=PUT" method="POST">
-        <input type="hidden" name="_method" value="PUT">
-        <input name="name" type="text" placeholder="Ingrese el nombre..." value="{{ name.name }}">
-        <button class="edit" type="submit">Edit</button>
-    </form>
-</body>
-</html>
+<h2>Edit</h2>
+<form action="/edit/{{name._id}}?_method=PUT" method="POST">
+  <input type="hidden" name="_method" value="PUT" />
+  <input
+    name="name"
+    type="text"
+    placeholder="Ingrese el nombre..."
+    value="{{name.name}}"
+  />
+  <button class="edit" type="submit">Edit</button>
+</form>
