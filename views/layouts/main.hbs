@@ -1,35 +1,34 @@
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/css/{{style}}.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-    ></script>
-    <script src="https://kit.fontawesome.com/8b1c082df7.js" crossorigin="anonymous"></script>
-    <title>Contacts App</title>
-  </head>
-  <body>
 
-    <header>
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark py-3">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Contacts App" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://init-with-express.vercel.app/" />
+  <meta property="og:image" content="https://init-with-express.vercel.app/img/background.png" />
+  <meta property="og:description" content="App de contactos actualmente de servicio de una sola cuenta lo cuál será actualizado para que en cada cuenta tenga ciertos contactos creados por los usuarios." />
+  <meta name="theme-color" content="#30dee3">
+
+  <!-- Include this to make the og:image larger -->
+  <meta name="twitter:card" content="https://init-with-express.vercel.app/img/background.png">
+  <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/{{style}}.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/8b1c082df7.js" crossorigin="anonymous"></script>
+  <title>Contacts App</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark py-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="/">Contacts App</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -44,9 +43,10 @@
         </div>
       </div>
     </nav>
-    </header>
+  </header>
 
-    {{{body}}}
+  {{{body}}}
 
-  </body>
+</body>
+
 </html>
