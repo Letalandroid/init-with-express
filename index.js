@@ -101,3 +101,9 @@ app.put('/edit/:id', async (req, res) => {
     res.redirect('/');
 
 })
+
+app.all('*', (_req, res) => {
+    res.render('404', {
+        style: '404'
+    });
+})
