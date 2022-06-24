@@ -16,6 +16,7 @@ mongoose.connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('DB Connected')).catch(err => console.log(err));
+const Example1 = require("./models/example");
 
 // App setup
 const app = express();
@@ -37,7 +38,6 @@ const port = process.env.PORT || 3000;
 // Routes
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
-const Example1 = require('./models/example');
 app.get('/', async (_req, res) => {
 
     try {
